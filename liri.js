@@ -16,4 +16,7 @@ switch(process.argv[2]) {       //check to see which argv index this should be
   case "do-what-it-says"
     //code for do-what-it says
     break;
+
+  default:
+    console.log("a command was not entered")  
 }
