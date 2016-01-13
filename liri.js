@@ -1,21 +1,23 @@
 var keys = require("./keys.js");
 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
-var consumer_key;
-var consumer_secret;
-var access_token_key;
-var access_token_secret;
+var twit_consumer_key;
+var twit_consumer_secret;
+var twit_access_token_key;
+var twit_access_token_secret;
 
 var test;
+
+//newString = parameters.replace(",", " ");
 
 switch(process.argv[2]) {       //check to see that this is the proper argv
   case "my-tweets":
     //code to be executed for my-tweets goes here
     test = "tweets works";
-    consumer_key = keys.twitterKeys.consumer_key;
-    consumer_secret = keys.twitterKeys.consumer_secret;
-    access_token_key = keys.twitterKeys.access_token_key;
-    access_token_secret = keys.twitterKeys.access_token_secret;
+    twit_consumer_key = keys.twitterKeys.consumer_key;
+    twit_consumer_secret = keys.twitterKeys.consumer_secret;
+    twit_access_token_key = keys.twitterKeys.access_token_key;
+    twit_access_token_secret = keys.twitterKeys.access_token_secret;
     break;
   case "spotify-this-song":
     if (parameters == "") {
@@ -47,4 +49,5 @@ switch(process.argv[2]) {       //check to see that this is the proper argv
 }
 
 console.log(test);
-console.log(keys);
+console.log(twit_access_token_key);
+//console.log(newString);
