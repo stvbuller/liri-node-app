@@ -8,9 +8,7 @@ var twit_access_token_secret;
 
 var test;
 
-//newString = parameters.replace(",", " ");
-
-switch(process.argv[2]) {       //check to see that this is the proper argv
+switch(process.argv[2]) {       //check that this is the proper argv
   case "my-tweets":
     //code to be executed for my-tweets goes here
     test = "tweets works";
@@ -29,7 +27,7 @@ switch(process.argv[2]) {       //check to see that this is the proper argv
     }
     break;
   case "movie-this":
-    //code for movie-this goes 
+    //code for movie-this 
     if (parameters == "") {
         //if no movie is provided default to ‘Mr. Nobody’
         test = "Mr. Nobody";
@@ -49,5 +47,5 @@ switch(process.argv[2]) {       //check to see that this is the proper argv
 }
 
 console.log(test);
-console.log(twit_access_token_key);
-//console.log(newString);
+//console.log(twit_access_token_key);
+console.log(parameters[0]);
