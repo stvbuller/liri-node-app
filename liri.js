@@ -1,5 +1,5 @@
 var keys = require("./keys.js");
-var request = require('request');     //requires the npm require package
+var request = require('request');     //requires the npm request package
 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var twit_consumer_key;
@@ -37,7 +37,7 @@ switch(process.argv[2]) {       //check that this is the proper argv
       //result = "the song is " + titleString;
       songTitle = titleString;
     }
-    //songUrl = "https://api.spotify.com/v1/search";
+    //songUrl = "https://api.spotify.com/v1/search/track?q=" + songTitle;
     songUrl = "http://ws.spotify.com/search/1/track?q=" + songTitle;
     request(songUrl, function (error, response, body) {
           if (!error && response.statusCode == 200) {
@@ -85,5 +85,6 @@ switch(process.argv[2]) {       //check that this is the proper argv
 }
 
 console.log(songTitle);
+//console.log(result);
 //console.log(twit_access_token_key);
 //console.log(titleString);
