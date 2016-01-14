@@ -1,7 +1,6 @@
 var keys = require("./keys.js");
 var request = require('request');     //requires the npm require package
 
-
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var twit_consumer_key;
 var twit_consumer_secret;
@@ -9,9 +8,14 @@ var twit_access_token_key;
 var twit_access_token_secret;
 var titleString = "";
 var movieTitle;
+var movieUrl;
+var songTitle;
+var songUrl;
+
 
 var result;
 
+//creates a string from the command line parameters
 for (i = 0; i < parameters.length; i++){
   titleString += parameters[i] + " ";
 }
@@ -28,20 +32,25 @@ switch(process.argv[2]) {       //check that this is the proper argv
   case "spotify-this-song":
     if (parameters == "") {
         //if no song is providied default to “what’s my age again” by blink 182
-        result = "what's my age again";
+        songTitle = "what's my age again";
     } else {
-      //code for spotify-this-song
-      result = "the song is " + titleString;
+      //result = "the song is " + titleString;
+      songTitle = titleString;
     }
+    //songUrl = "https://api.spotify.com/v1/search";
+    songUrl = "http://ws.spotify.com/search/1/track?q=" + songTitle;
+    request(songUrl, function (error, response, body) {
+          if (!error && response.statusCode == 200) {
+            console.log(body);
+          }
+        });
     break;
   case "movie-this":
-    //code for movie-this 
     if (parameters == "") {
         //if no movie is provided default to ‘Mr. Nobody’
         movieTitle = "Mr. Nobody";
     }
     else {
-        //result = "the movie is " + titleString;
         movieTitle = titleString;
     }
     movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json"
@@ -52,16 +61,16 @@ switch(process.argv[2]) {       //check that this is the proper argv
     //     });
     request(movieUrl, function (error, response, body) {
           if (!error && response.statusCode == 200) {
-            console.log(body);
-            console.log(JSON.parse(body)["Title"])
-            console.log(JSON.parse(body)["Year"])
-            console.log(JSON.parse(body)["imdbRating"])
-            console.log(JSON.parse(body)["Country"])
-            console.log(JSON.parse(body)["Language"])
-            console.log(JSON.parse(body)["Plot"])
-            console.log(JSON.parse(body)["Actors"])
-            console.log(JSON.parse(body)["tomatoRating"])
-            console.log(JSON.parse(body)["tomatoURL"])
+            //console.log(body);
+            console.log("The Title is: " + JSON.parse(body)["Title"])
+            console.log("The Year is: " + JSON.parse(body)["Year"])
+            console.log("The imdbRating is: " + JSON.parse(body)["imdbRating"])
+            console.log("The Country is: " + JSON.parse(body)["Country"])
+            console.log("The Language is: " + JSON.parse(body)["Language"])
+            console.log("The Plot is: " + JSON.parse(body)["Plot"])
+            console.log("The Actors are: " + JSON.parse(body)["Actors"])
+            console.log("The Rotton Tomatoes Rating is: " + JSON.parse(body)["tomatoRating"])
+            console.log("The Rotton Tomatoes url is: " + JSON.parse(body)["tomatoURL"])
           }
         });
     break;
@@ -75,8 +84,6 @@ switch(process.argv[2]) {       //check that this is the proper argv
     break;
 }
 
-console.log(result);
+console.log(songTitle);
 //console.log(twit_access_token_key);
-// console.log(parameters);
-// console.log(titleString);
-//console.log(parameters[0]);
+//console.log(titleString);
