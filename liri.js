@@ -1,4 +1,6 @@
 var keys = require("./keys.js");
+var request = require('request');     //requires the npm require package
+
 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var twit_consumer_key;
@@ -6,7 +8,9 @@ var twit_consumer_secret;
 var twit_access_token_key;
 var twit_access_token_secret;
 var titleString = "";
-var test;
+var movieTitle;
+
+var result;
 
 for (i = 0; i < parameters.length; i++){
   titleString += parameters[i] + " ";
@@ -15,7 +19,7 @@ for (i = 0; i < parameters.length; i++){
 switch(process.argv[2]) {       //check that this is the proper argv
   case "my-tweets":
     //code to be executed for my-tweets goes here
-    test = "tweets works";
+    result = "tweets works";
     twit_consumer_key = keys.twitterKeys.consumer_key;
     twit_consumer_secret = keys.twitterKeys.consumer_secret;
     twit_access_token_key = keys.twitterKeys.access_token_key;
@@ -24,34 +28,47 @@ switch(process.argv[2]) {       //check that this is the proper argv
   case "spotify-this-song":
     if (parameters == "") {
         //if no song is providied default to “what’s my age again” by blink 182
-        test = "what's my age again";
+        result = "what's my age again";
     } else {
       //code for spotify-this-song
-      test = "the song is " + parameters;
+      result = "the song is " + titleString;
     }
     break;
   case "movie-this":
     //code for movie-this 
     if (parameters == "") {
         //if no movie is provided default to ‘Mr. Nobody’
-        test = "Mr. Nobody";
+        movieTitle = "Mr. Nobody";
     }
     else {
-        test = "the movie is " + parameters;
+        result = "the movie is " + titleString;
+        movieTitle = titleString;
     }
+    movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&r=json"
+    // request('http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&r=json', function (error, response, body) {
+    //       if (!error && response.statusCode == 200) {
+    //         console.log(JSON.parse(body)["imdbRating"])
+    //       }
+    //     });
+    request(movieUrl, function (error, response, body) {
+          if (!error && response.statusCode == 200) {
+            console.log(body);
+            //console.log(JSON.parse(body)["imdbRating"])
+          }
+        });
     break;
   case "do-what-it-says":
     //code for do-what-it-says
-    test = "what it says is " + parameters;
+    result = "what it says is " + parameters;
     break;
 
   default:
-    test = "a command was not entered"; 
+    result = "a command was not entered"; 
     break;
 }
 
-//console.log(test);
+console.log(result);
 //console.log(twit_access_token_key);
-console.log(parameters);
-console.log(titleString);
+// console.log(parameters);
+// console.log(titleString);
 //console.log(parameters[0]);
