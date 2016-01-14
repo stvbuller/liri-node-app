@@ -75,8 +75,14 @@ switch(process.argv[2]) {       //check that this is the proper argv
         });
     break;
   case "do-what-it-says":
-    //code for do-what-it-says
-    result = "what it says is " + parameters;
+    //result = "what it says is " + parameters;
+    var fs = require('fs'); //reads and writes files using the builtin fs package
+
+    fs.readFile("random.txt", "utf8", function(error, command) {
+        console.log(command);
+        var commandArr = command.split(',');
+        console.log(commandArr);
+    });    
     break;
 
   default:
