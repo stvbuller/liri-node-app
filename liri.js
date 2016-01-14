@@ -1,21 +1,25 @@
 var keys = require("./keys.js");
 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
-var consumer_key;
-var consumer_secret;
-var access_token_key;
-var access_token_secret;
-
+var twit_consumer_key;
+var twit_consumer_secret;
+var twit_access_token_key;
+var twit_access_token_secret;
+var titleString = "";
 var test;
 
-switch(process.argv[2]) {       //check to see that this is the proper argv
+for (i = 0; i < parameters.length; i++){
+  titleString += parameters[i] + " ";
+}
+
+switch(process.argv[2]) {       //check that this is the proper argv
   case "my-tweets":
     //code to be executed for my-tweets goes here
     test = "tweets works";
-    consumer_key = keys.twitterKeys.consumer_key;
-    consumer_secret = keys.twitterKeys.consumer_secret;
-    access_token_key = keys.twitterKeys.access_token_key;
-    access_token_secret = keys.twitterKeys.access_token_secret;
+    twit_consumer_key = keys.twitterKeys.consumer_key;
+    twit_consumer_secret = keys.twitterKeys.consumer_secret;
+    twit_access_token_key = keys.twitterKeys.access_token_key;
+    twit_access_token_secret = keys.twitterKeys.access_token_secret;
     break;
   case "spotify-this-song":
     if (parameters == "") {
@@ -27,7 +31,7 @@ switch(process.argv[2]) {       //check to see that this is the proper argv
     }
     break;
   case "movie-this":
-    //code for movie-this goes 
+    //code for movie-this 
     if (parameters == "") {
         //if no movie is provided default to ‘Mr. Nobody’
         test = "Mr. Nobody";
@@ -46,5 +50,8 @@ switch(process.argv[2]) {       //check to see that this is the proper argv
     break;
 }
 
-console.log(test);
-console.log(keys);
+//console.log(test);
+//console.log(twit_access_token_key);
+console.log(parameters);
+console.log(titleString);
+//console.log(parameters[0]);
