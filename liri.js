@@ -41,10 +41,10 @@ switch(process.argv[2]) {       //check that this is the proper argv
         movieTitle = "Mr. Nobody";
     }
     else {
-        result = "the movie is " + titleString;
+        //result = "the movie is " + titleString;
         movieTitle = titleString;
     }
-    movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&r=json"
+    movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json"
     // request('http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&r=json', function (error, response, body) {
     //       if (!error && response.statusCode == 200) {
     //         console.log(JSON.parse(body)["imdbRating"])
@@ -53,7 +53,15 @@ switch(process.argv[2]) {       //check that this is the proper argv
     request(movieUrl, function (error, response, body) {
           if (!error && response.statusCode == 200) {
             console.log(body);
-            //console.log(JSON.parse(body)["imdbRating"])
+            console.log(JSON.parse(body)["Title"])
+            console.log(JSON.parse(body)["Year"])
+            console.log(JSON.parse(body)["imdbRating"])
+            console.log(JSON.parse(body)["Country"])
+            console.log(JSON.parse(body)["Language"])
+            console.log(JSON.parse(body)["Plot"])
+            console.log(JSON.parse(body)["Actors"])
+            console.log(JSON.parse(body)["tomatoRating"])
+            console.log(JSON.parse(body)["tomatoURL"])
           }
         });
     break;
