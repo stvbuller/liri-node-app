@@ -78,10 +78,14 @@ switch(process.argv[2]) {       //check that this is the proper argv
     //result = "what it says is " + parameters;
     var fs = require('fs'); //reads and writes files using the builtin fs package
 
-    fs.readFile("random.txt", "utf8", function(error, command) {
+    fs.readFile("random.txt", "utf8", function(error, commandData) {
+        //console.log(commandData);
+        var commandArr = commandData.split(',');
+        var command = commandArr[0];
+        var commandParameter = commandArr[1];
+        //console.log(commandArr);
         console.log(command);
-        var commandArr = command.split(',');
-        console.log(commandArr);
+        console.log(commandParameter);
     });    
     break;
 
