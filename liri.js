@@ -5,8 +5,12 @@ var twit_consumer_key;
 var twit_consumer_secret;
 var twit_access_token_key;
 var twit_access_token_secret;
-
+var titleString = "";
 var test;
+
+for (i = 0; i < parameters.length; i++){
+  titleString += parameters[i] + " ";
+}
 
 switch(process.argv[2]) {       //check that this is the proper argv
   case "my-tweets":
@@ -46,6 +50,8 @@ switch(process.argv[2]) {       //check that this is the proper argv
     break;
 }
 
-console.log(test);
+//console.log(test);
 //console.log(twit_access_token_key);
-console.log(parameters[0]);
+console.log(parameters);
+console.log(titleString);
+//console.log(parameters[0]);
