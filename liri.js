@@ -1,15 +1,14 @@
 var keys = require("./keys.js");
 var request = require('request');     //requires the npm request package
 var Twitter = require('twitter');
-
+var spotify = require('spotify');
+ 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var titleString = "";
 var movieTitle;
 var movieUrl;
 var songTitle;
 var songUrl;
-
-var result;
 
 //creates a string from the command line parameters
 for (i = 0; i < parameters.length; i++){
@@ -41,20 +40,32 @@ switch(process.argv[2]) {       //check that this is the proper argv
     } else {
       songTitle = titleString;
     }
-    songUrl = "http://ws.spotify.com/search/1/track.json?q=" + songTitle;
-    request(songUrl, function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-        var songInfo = JSON.parse(body);
-        console.log(JSON.parse(body)["info"]);
-        for (i = 0; i < 5; i++) {
-          console.log("The album name is: " + songInfo.tracks[i].album.name);
-          console.log("The artist is: " + songInfo.tracks[i].artists[0].name);
-          //console.log("The artist is: " + songInfo.tracks[0].artists[1].name);
-          console.log("The name of the track is: " + songInfo.tracks[i].name);
-          console.log("The spotify preview is: " + songInfo.tracks[i].href);
+    //this uses the npm spotify package to get info from spotify
+    spotify.search({ type: 'track', query: songTitle }, function(err, data) {
+        if ( err ) {
+            console.log('Error occurred: ' + err);
+            return;
         }
-      }
+          //console.log(data);
+          var songInfo = JSON.parse(data);
+          console.log("The song info is: " + songInfo);
+          
+        // Do something with 'data' 
     });
+    //this uses the request npm package to get info from spotify
+    // songUrl = "http://ws.spotify.com/search/1/track.json?q=" + songTitle;
+    // request(songUrl, function (error, response, body) {
+    //   if (!error && response.statusCode == 200) {
+    //     var songInfo = JSON.parse(body);
+    //     console.log(JSON.parse(body)["info"]);
+    //     for (i = 0; i < 5; i++) {
+    //       console.log("The album name is: " + songInfo.tracks[i].album.name);
+    //       console.log("The artist is: " + songInfo.tracks[i].artists[0].name);
+    //       console.log("The name of the track is: " + songInfo.tracks[i].name);
+    //       console.log("The spotify preview is: " + songInfo.tracks[i].href);
+    //     }
+    //   }
+    // });
     break;
   case "movie-this":
     if (parameters == "") {
@@ -95,7 +106,7 @@ switch(process.argv[2]) {       //check that this is the proper argv
     break;
 
   default:
-    result = "a command was not entered"; 
+    console.log("a command was not entered"); 
     break;
 }
 
