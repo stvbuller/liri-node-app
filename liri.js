@@ -1,7 +1,7 @@
 var keys = require("./keys.js");
 var request = require('request');     //requires the npm request package
-var Twitter = require('twitter');
-var spotify = require('spotify');
+var Twitter = require('twitter');     //requires the npm twitter package
+var spotify = require('spotify');     //requires the npm spotify package
  
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var titleString = "";
@@ -46,11 +46,13 @@ switch(process.argv[2]) {       //check that this is the proper argv
             console.log('Error occurred: ' + err);
             return;
         }
-          //console.log(data);
-          var songInfo = JSON.parse(data);
-          console.log("The song info is: " + songInfo);
-          
-        // Do something with 'data' 
+        //console.log(data);
+        for (i = 0; i < 5; i++) {
+          console.log("The artist is: " + data.tracks.items[i].artists[0].name);
+          console.log("The track name is: " + data.tracks.items[i].name);
+          console.log("The album name is: " + data.tracks.items[i].album.name);
+          console.log("The Spotfiy preview is: " + data.tracks.items[i].external_urls.spotify);
+        } 
     });
     //this uses the request npm package to get info from spotify
     // songUrl = "http://ws.spotify.com/search/1/track.json?q=" + songTitle;
@@ -97,10 +99,10 @@ switch(process.argv[2]) {       //check that this is the proper argv
     fs.readFile("random.txt", "utf8", function(error, commandData) {
         //console.log(commandData);
         var commandArr = commandData.split(',');
-        var command = commandArr[0];
+        var commandOne = commandArr[0];
         var commandParameter = commandArr[1];
         //console.log(commandArr);
-        console.log(command);
+        console.log(commandOne);
         console.log(commandParameter);
     });    
     break;
@@ -110,4 +112,4 @@ switch(process.argv[2]) {       //check that this is the proper argv
     break;
 }
 
-//console.log(titleString);
+
