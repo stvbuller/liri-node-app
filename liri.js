@@ -1,19 +1,14 @@
 var keys = require("./keys.js");
-var request = require('request');     //requires the npm require package
-
+var request = require('request');     //requires the npm request package
+var Twitter = require('twitter');     //requires the npm twitter package
+var spotify = require('spotify');     //requires the npm spotify package
+ 
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
-var twit_consumer_key;
-var twit_consumer_secret;
-var twit_access_token_key;
-var twit_access_token_secret;
 var titleString = "";
 var movieTitle;
 var movieUrl;
 var songTitle;
 var songUrl;
-
-
-var result;
 
 //creates a string from the command line parameters
 for (i = 0; i < parameters.length; i++){
@@ -22,28 +17,57 @@ for (i = 0; i < parameters.length; i++){
 
 switch(process.argv[2]) {       //check that this is the proper argv
   case "my-tweets":
-    //code to be executed for my-tweets goes here
-    result = "tweets works";
-    twit_consumer_key = keys.twitterKeys.consumer_key;
-    twit_consumer_secret = keys.twitterKeys.consumer_secret;
-    twit_access_token_key = keys.twitterKeys.access_token_key;
-    twit_access_token_secret = keys.twitterKeys.access_token_secret;
+    var client = new Twitter({
+      consumer_key: keys.twitterKeys.consumer_key,
+      consumer_secret: keys.twitterKeys.consumer_secret,
+      access_token_key: keys.twitterKeys.access_token_key,
+      access_token_secret: keys.twitterKeys.access_token_secret
+    });
+    var params = {screen_name: 'stvbuller'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response){
+      if (!error) {
+        //console.log(tweets);
+        for (i = 0; i < 20; i++){
+        console.log(tweets[i].text)
+        }
+      }
+    });
     break;
   case "spotify-this-song":
     if (parameters == "") {
         //if no song is providied default to “what’s my age again” by blink 182
         songTitle = "what's my age again";
     } else {
-      //result = "the song is " + titleString;
       songTitle = titleString;
     }
-    //songUrl = "https://api.spotify.com/v1/search";
-    songUrl = "http://ws.spotify.com/search/1/track?q=" + songTitle;
-    request(songUrl, function (error, response, body) {
-          if (!error && response.statusCode == 200) {
-            console.log(body);
-          }
-        });
+    //this uses the npm spotify package to get info from spotify
+    spotify.search({ type: 'track', query: songTitle }, function(err, data) {
+        if ( err ) {
+            console.log('Error occurred: ' + err);
+            return;
+        }
+        //console.log(data);
+        for (i = 0; i < 5; i++) {
+          console.log("The artist is: " + data.tracks.items[i].artists[0].name);
+          console.log("The track name is: " + data.tracks.items[i].name);
+          console.log("The album name is: " + data.tracks.items[i].album.name);
+          console.log("The Spotfiy preview is: " + data.tracks.items[i].external_urls.spotify);
+        } 
+    });
+    //this uses the request npm package to get info from spotify
+    // songUrl = "http://ws.spotify.com/search/1/track.json?q=" + songTitle;
+    // request(songUrl, function (error, response, body) {
+    //   if (!error && response.statusCode == 200) {
+    //     var songInfo = JSON.parse(body);
+    //     console.log(JSON.parse(body)["info"]);
+    //     for (i = 0; i < 5; i++) {
+    //       console.log("The album name is: " + songInfo.tracks[i].album.name);
+    //       console.log("The artist is: " + songInfo.tracks[i].artists[0].name);
+    //       console.log("The name of the track is: " + songInfo.tracks[i].name);
+    //       console.log("The spotify preview is: " + songInfo.tracks[i].href);
+    //     }
+    //   }
+    // });
     break;
   case "movie-this":
     if (parameters == "") {
@@ -54,11 +78,6 @@ switch(process.argv[2]) {       //check that this is the proper argv
         movieTitle = titleString;
     }
     movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json"
-    // request('http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&r=json', function (error, response, body) {
-    //       if (!error && response.statusCode == 200) {
-    //         console.log(JSON.parse(body)["imdbRating"])
-    //       }
-    //     });
     request(movieUrl, function (error, response, body) {
           if (!error && response.statusCode == 200) {
             //console.log(body);
@@ -75,15 +94,22 @@ switch(process.argv[2]) {       //check that this is the proper argv
         });
     break;
   case "do-what-it-says":
-    //code for do-what-it-says
-    result = "what it says is " + parameters;
+    var fs = require('fs'); //reads and writes files using the builtin fs package
+
+    fs.readFile("random.txt", "utf8", function(error, commandData) {
+        //console.log(commandData);
+        var commandArr = commandData.split(',');
+        var commandOne = commandArr[0];
+        var commandParameter = commandArr[1];
+        //console.log(commandArr);
+        console.log(commandOne);
+        console.log(commandParameter);
+    });    
     break;
 
   default:
-    result = "a command was not entered"; 
+    console.log("a command was not entered"); 
     break;
 }
 
-console.log(songTitle);
-//console.log(twit_access_token_key);
-//console.log(titleString);
+
