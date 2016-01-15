@@ -39,10 +39,18 @@ switch(process.argv[2]) {       //check that this is the proper argv
     }
     songUrl = "http://ws.spotify.com/search/1/track.json?q=" + songTitle;
     request(songUrl, function (error, response, body) {
-          if (!error && response.statusCode == 200) {
-            console.log(body);
-          }
-        });
+      if (!error && response.statusCode == 200) {
+        var songInfo = JSON.parse(body);
+        console.log(JSON.parse(body)["info"]);
+        for (i = 0; i < 5; i++) {
+          console.log("The album name is: " + songInfo.tracks[i].album.name);
+          console.log("The artist is: " + songInfo.tracks[i].artists[0].name);
+          //console.log("The artist is: " + songInfo.tracks[0].artists[1].name);
+          console.log("The name of the track is: " + songInfo.tracks[i].name);
+          console.log("The spotify preview is: " + songInfo.tracks[i].href);
+        }
+      }
+    });
     break;
   case "movie-this":
     if (parameters == "") {
@@ -93,7 +101,7 @@ switch(process.argv[2]) {       //check that this is the proper argv
     break;
 }
 
-console.log(songTitle);
+console.log("The song title is " + songTitle);
 //console.log(result);
 //console.log(twit_access_token_key);
 //console.log(titleString);
