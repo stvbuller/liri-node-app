@@ -1,35 +1,25 @@
-// var keys = require("./keys.js");
-// var request = require('request');     //requires the npm request package
-// var Twitter = require('twitter');     //requires the npm twitter package
-// var spotify = require('spotify');     //requires the npm spotify package
- 
+
 var parameters = process.argv.slice(3);  //check that this is slicing in the proper position
 var commandName = process.argv[2];      //check that this is the proper argv
-var titleString = "";
 var titleStringOne = "";
-// var movieTitle;
-// var movieUrl;
-// var songTitle;
-// var songUrl;
 
 //creates a string from the command line parameters
 for (i = 0; i < parameters.length; i++){
   titleStringOne += parameters[i] + " ";
 }
 
-function liriApp(appName, titleString){
+function liriApp(appName, titleString) {
 
   var keys = require("./keys.js");
   var request = require('request');     //requires the npm request package
   var Twitter = require('twitter');     //requires the npm twitter package
   var spotify = require('spotify');     //requires the npm spotify package
-
   var movieTitle;
   var movieUrl;
   var songTitle;
-  var songUrl;
+  //var songUrl;
 
-  switch(appName) {       
+  switch (appName){       
     case "my-tweets":
       var client = new Twitter({
         consumer_key: keys.twitterKeys.consumer_key,
@@ -41,8 +31,8 @@ function liriApp(appName, titleString){
       client.get('statuses/user_timeline', params, function(error, tweets, response){
         if (!error) {
           //console.log(tweets);
-          for (i = 0; i < 20; i++){
-          console.log(tweets[i].text)
+          for (var i = 0; i < 20; i++) {
+            console.log(tweets[i].text);
           }
         }
       });
@@ -52,16 +42,16 @@ function liriApp(appName, titleString){
           //if no song is providied default to “what’s my age again” by blink 182
           songTitle = "what's my age again";
       } else {
-        songTitle = titleString;
+          songTitle = titleString;
       }
       //this uses the npm spotify package to get info from spotify
-      spotify.search({ type: 'track', query: songTitle }, function(err, data) {
+      spotify.search ({type: 'track', query: songTitle}, function(err, data) {
           if ( err ) {
               console.log('Error occurred: ' + err);
               return;
           }
           //console.log(data);
-          for (i = 0; i < 5; i++) {
+          for (var i = 0; i < 5; i++) {
             console.log("The artist is: " + data.tracks.items[i].artists[0].name);
             console.log("The track name is: " + data.tracks.items[i].name);
             console.log("The album name is: " + data.tracks.items[i].album.name);
@@ -74,7 +64,7 @@ function liriApp(appName, titleString){
       //   if (!error && response.statusCode == 200) {
       //     var songInfo = JSON.parse(body);
       //     console.log(JSON.parse(body)["info"]);
-      //     for (i = 0; i < 5; i++) {
+      //     for (var i = 0; i < 5; i++) {
       //       console.log("The album name is: " + songInfo.tracks[i].album.name);
       //       console.log("The artist is: " + songInfo.tracks[i].artists[0].name);
       //       console.log("The name of the track is: " + songInfo.tracks[i].name);
@@ -91,48 +81,39 @@ function liriApp(appName, titleString){
       else {
           movieTitle = titleString;
       }
-      movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json"
+      movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json";
       request(movieUrl, function (error, response, body) {
             if (!error && response.statusCode == 200) {
               //console.log(body);
-              console.log("The Title is: " + JSON.parse(body)["Title"])
-              console.log("The Year is: " + JSON.parse(body)["Year"])
-              console.log("The imdbRating is: " + JSON.parse(body)["imdbRating"])
-              console.log("The Country is: " + JSON.parse(body)["Country"])
-              console.log("The Language is: " + JSON.parse(body)["Language"])
-              console.log("The Plot is: " + JSON.parse(body)["Plot"])
-              console.log("The Actors are: " + JSON.parse(body)["Actors"])
-              console.log("The Rotton Tomatoes Rating is: " + JSON.parse(body)["tomatoRating"])
-              console.log("The Rotton Tomatoes url is: " + JSON.parse(body)["tomatoURL"])
+              console.log("The Title is: " + JSON.parse(body)["Title"]);
+              console.log("The Year is: " + JSON.parse(body)["Year"]);
+              console.log("The imdbRating is: " + JSON.parse(body)["imdbRating"]);
+              console.log("The Country is: " + JSON.parse(body)["Country"]);
+              console.log("The Language is: " + JSON.parse(body)["Language"]);
+              console.log("The Plot is: " + JSON.parse(body)["Plot"]);
+              console.log("The Actors are: " + JSON.parse(body)["Actors"]);
+              console.log("The Rotton Tomatoes Rating is: " + JSON.parse(body)["tomatoRating"]);
+              console.log("The Rotton Tomatoes url is: " + JSON.parse(body)["tomatoURL"]);
             }
           });
       break;
     case "do-what-it-says":
       var fs = require('fs'); //reads and writes files using the builtin fs package
-          var commandArr;
-          var commandOne;
-          var commandParameter;
-
+      
       fs.readFile("random.txt", "utf8", function(error, commandData) {
           //console.log(commandData);
-          commandArr = commandData.split(',');
-          commandOne = commandArr[0];
-          commandParameter = commandArr[1].toString();
+          var commandArr = commandData.split(',');
+          var commandLiri = commandArr[0];
+          var commandParameter = commandArr[1];
           //console.log(commandArr);
-          console.log(commandOne);
-          console.log(commandParameter);
+          liriApp(commandLiri, commandParameter);
       });  
-      //this calls the liriApp function to execute the instructions
-      //in the random.txt file 
-      liriApp(commandOne, commandParameter); 
       break;
 
     default:
       console.log("a command was not entered"); 
       break;
   }
-
 }
 
 liriApp(commandName, titleStringOne);
-
