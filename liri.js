@@ -14,13 +14,13 @@ function liriApp(appName, titleString) {
   var request = require('request');     //requires the npm request package
   var Twitter = require('twitter');     //requires the npm twitter package
   var spotify = require('spotify');     //requires the npm spotify package
-  var fs = require('fs'); //reads and writes files using the builtin fs package
+  var fs = require('fs'); //reads and writes files using the built-in fs package
 
   var movieTitle;
   var movieUrl;
   var movieSearchResult;
   var songTitle;
-  //var songUrl;         //this is used in the spotify search that uses the npm package
+  //var songUrl;         //used in the spotify search that uses the npm package
 
   switch (appName){       
     case "my-tweets":
@@ -57,6 +57,7 @@ function liriApp(appName, titleString) {
               return;
           }
           //console.log(data);
+          //create a blank line
           fs.appendFile("log.txt", "\n");
           for (var i = 0; i < 5; i++) {
             console.log("The artist is: " + data.tracks.items[i].artists[0].name);
@@ -94,9 +95,8 @@ function liriApp(appName, titleString) {
       }
       movieUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&tomatoes=true&y=&plot=short&r=json";
       request(movieUrl, function (error, response, body) {
-            if (!error && response.statusCode == 200) {
+            if (!error && response.statusCode === 200) {
               //console.log(body);
-              //console.log("The Title is: " + JSON.parse(body)["Title"]);
               movieSearchResult = JSON.parse(body);
               console.log("The Title is: " + movieSearchResult.Title);
               console.log("The imdbRating is: " + movieSearchResult.imdbRating);
@@ -106,25 +106,25 @@ function liriApp(appName, titleString) {
               console.log("The Actors are: " + movieSearchResult.Actors);
               console.log("The Rotton Tomatoes Rating is: " + movieSearchResult.tomatoRating);
               console.log("The Rotton Tomatoes url is: " + movieSearchResult.tomatoURL);
-              // console.log("The Year is: " + JSON.parse(body)["Year"]);
-              // console.log("The imdbRating is: " + JSON.parse(body)["imdbRating"]);
-              // console.log("The Country is: " + JSON.parse(body)["Country"]);
-              // console.log("The Language is: " + JSON.parse(body)["Language"]);
-              // console.log("The Plot is: " + JSON.parse(body)["Plot"]);
-              // console.log("The Actors are: " + JSON.parse(body)["Actors"]);
-              // console.log("The Rotton Tomatoes Rating is: " + JSON.parse(body)["tomatoRating"]);
-              // console.log("The Rotton Tomatoes url is: " + JSON.parse(body)["tomatoURL"]);
+              //create a blank line
+              fs.appendFile("log.txt", "\n");
+              fs.appendFile("log.txt",  "The Title is: " + movieSearchResult.Title + "\n");
+              fs.appendFile("log.txt",  "The imdbRating is: " + movieSearchResult.imdbRating + "\n");
+              fs.appendFile("log.txt",  "The Country is: " + movieSearchResult.Country + "\n");
+              fs.appendFile("log.txt",  "The Language is: " + movieSearchResult.Language + "\n");
+              fs.appendFile("log.txt",  "The Plot is: " + movieSearchResult.Plot + "\n");
+              fs.appendFile("log.txt",  "The Actors are: " + movieSearchResult.Actors + "\n");
+              fs.appendFile("log.txt",  "The Rotton Tomatoes Rating is: " + movieSearchResult.tomatoRating + "\n");
+              fs.appendFile("log.txt",  "The Rotton Tomatoes url is: " + movieSearchResult.tomatoURL + "\n");
             }
           });
       break;
     case "do-what-it-says":
       
       fs.readFile("random.txt", "utf8", function(error, commandData) {
-          //console.log(commandData);
           var commandArr = commandData.split(',');
           var commandLiri = commandArr[0];
           var commandParameter = commandArr[1];
-          //console.log(commandArr);
           liriApp(commandLiri, commandParameter);
       });  
       break;
