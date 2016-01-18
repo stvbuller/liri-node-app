@@ -16,10 +16,13 @@ function liriApp(appName, titleString) {
   var spotify = require('spotify');     //requires the npm spotify package
   var fs = require('fs'); //reads and writes files using the built-in fs package
 
-  var movieTitle;
-  var movieUrl;
-  var movieSearchResult;
-  var songTitle;
+  var movieTitle;               //used in the movie-this case
+  var movieUrl;                 //used in the movie-this case
+  var movieSearchResult;        //used in the movie-this case
+  var songTitle;                //used in the spotify-this-song case
+  var commandArr;                 //used in the do-what-it-says case
+  var commandLiri;                //used in the do-what-it-says case
+  var commandParameter;           //used in the do-what-it-says case
   //var songUrl;         //used in the spotify search that uses the npm package
 
   switch (appName){       
@@ -122,9 +125,9 @@ function liriApp(appName, titleString) {
     case "do-what-it-says":
       
       fs.readFile("random.txt", "utf8", function(error, commandData) {
-          var commandArr = commandData.split(',');
-          var commandLiri = commandArr[0];
-          var commandParameter = commandArr[1];
+          commandArr = commandData.split(',');
+          commandLiri = commandArr[0];
+          commandParameter = commandArr[1];
           liriApp(commandLiri, commandParameter);
       });  
       break;
