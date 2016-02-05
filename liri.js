@@ -48,6 +48,7 @@ function liriApp(appName, titleString) {
       break;
     case "spotify-this-song":
       if (parameters == "") {
+          //console.log("The title string is : " + titleString);
           //if no song is providied default to “what’s my age again” by blink 182
           songTitle = "what's my age again";
       } else {
@@ -128,7 +129,11 @@ function liriApp(appName, titleString) {
           commandArr = commandData.split(',');
           commandLiri = commandArr[0];
           commandParameter = commandArr[1];
+          //commandParameter = commandParameter.replace(/['"]+/g, '');
           liriApp(commandLiri, commandParameter);
+          console.log("the parameter is " + commandParameter);
+          //console.log(commandParameter.replace(/['"]+/g, ''));
+          console.log("the liri command is " + commandLiri);
       });  
       break;
 

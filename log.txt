@@ -1,0 +1,324 @@
+
+The Title is: Casablanca
+The imdbRating is: 8.6
+The Country is: USA
+The Language is: English, French, German, Italian
+The Plot is: Set in Casablanca, Morocco during the early days of World War II: An American expatriate meets a former lover, with unforeseen complications.
+The Actors are: Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains
+The Rotton Tomatoes Rating is: 9.3
+The Rotton Tomatoes url is: http://www.rottentomatoes.com/m/1003707-casablanca/
+
+The artist is: The Playtones
+The track name is: Donna Lee
+The album name is: It’s Alright (Deluxe Version)
+The Spotfiy preview is: https://open.spotify.com/track/1ype5r8PgC4i9tKqDkezM6
+The artist is: Cornelis Vreeswijk
+The track name is: Donna Lee
+The album name is: Cornelis Vreeswijk & Jazz Incorporated (Recorded at Konsertpaleet, Bergen 1979)
+The Spotfiy preview is: https://open.spotify.com/track/4TsxRWYWTo14uwZAvMZvP0
+The artist is: Lee Konitz
+The track name is: Donna Lee
+The album name is: Lee Konitz with Warne Marsh
+The Spotfiy preview is: https://open.spotify.com/track/2N7LJO1uufnSeXIwxooTzg
+The artist is: Jaco Pastorius
+The track name is: Donna Lee
+The album name is: Jaco Pastorius
+The Spotfiy preview is: https://open.spotify.com/track/7CfCkdTNWFQDopWol8SWYQ
+The artist is: Cory Henry
+The track name is: Donna Lee
+The album name is: Gotcha Now Doc
+The Spotfiy preview is: https://open.spotify.com/track/6CYFEVhc3BdAaMcS0G4P68
+
+The artist is: The Playtones
+The track name is: Donna Lee
+The album name is: It’s Alright (Deluxe Version)
+The Spotfiy preview is: https://open.spotify.com/track/1ype5r8PgC4i9tKqDkezM6
+The artist is: Cornelis Vreeswijk
+The track name is: Donna Lee
+The album name is: Cornelis Vreeswijk & Jazz Incorporated (Recorded at Konsertpaleet, Bergen 1979)
+The Spotfiy preview is: https://open.spotify.com/track/4TsxRWYWTo14uwZAvMZvP0
+The artist is: Lee Konitz
+The track name is: Donna Lee
+The album name is: Lee Konitz with Warne Marsh
+The Spotfiy preview is: https://open.spotify.com/track/2N7LJO1uufnSeXIwxooTzg
+The track name is: Donna Lee
+The artist is: Jaco Pastorius
+The album name is: Jaco Pastorius
+The Spotfiy preview is: https://open.spotify.com/track/7CfCkdTNWFQDopWol8SWYQ
+The artist is: Cory Henry
+The track name is: Donna Lee
+The album name is: Gotcha Now Doc
+The Spotfiy preview is: https://open.spotify.com/track/6CYFEVhc3BdAaMcS0G4P68
+
+The artist is: The Playtones
+The track name is: Donna Lee
+The album name is: It’s Alright (Deluxe Version)
+The Spotfiy preview is: https://open.spotify.com/track/1ype5r8PgC4i9tKqDkezM6
+The artist is: Cornelis Vreeswijk
+The track name is: Donna Lee
+The album name is: Cornelis Vreeswijk & Jazz Incorporated (Recorded at Konsertpaleet, Bergen 1979)
+The Spotfiy preview is: https://open.spotify.com/track/4TsxRWYWTo14uwZAvMZvP0
+The artist is: Lee Konitz
+The track name is: Donna Lee
+The album name is: Lee Konitz with Warne Marsh
+The Spotfiy preview is: https://open.spotify.com/track/2N7LJO1uufnSeXIwxooTzg
+The artist is: Jaco Pastorius
+The track name is: Donna Lee
+The album name is: Jaco Pastorius
+The Spotfiy preview is: https://open.spotify.com/track/7CfCkdTNWFQDopWol8SWYQ
+The artist is: Cory Henry
+The track name is: Donna Lee
+The album name is: Gotcha Now Doc
+The Spotfiy preview is: https://open.spotify.com/track/6CYFEVhc3BdAaMcS0G4P68
+
+Finally up to twenty, enough tweets for my-tweets
+Tweet 19
+Scott Henderson rocks
+Return to Forever rocks
+Gary Willis rocks
+Another tweet to get up to twenty
+The markets down big today, more to come, no doubt
+Another tweet to build up the tweets for my-tweets
+now to get do-what-it-says working
+the commandName variable is working
+console.log is working for Spotify
+Working on the Spotify npm package
+The npm package for the Twitter api is working
+spotify-this is working using the Spotify Ali
+movie-this works using the IMDb api
+node.js and Hadoop
+Node.js keeps getting more interesting
+LIRI app test tweet
+learning about back-end development looks like it will be rewarding
+node.js in interesting
+
+Finally up to twenty, enough tweets for my-tweets
+Tweet 19
+Scott Henderson rocks
+Return to Forever rocks
+Gary Willis rocks
+Another tweet to get up to twenty
+The markets down big today, more to come, no doubt
+Another tweet to build up the tweets for my-tweets
+now to get do-what-it-says working
+the commandName variable is working
+console.log is working for Spotify
+Working on the Spotify npm package
+The npm package for the Twitter api is working
+spotify-this is working using the Spotify Ali
+movie-this works using the IMDb api
+node.js and Hadoop
+Node.js keeps getting more interesting
+LIRI app test tweet
+learning about back-end development looks like it will be rewarding
+node.js in interesting
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The track name is: What's My Age Again?
+The artist is: blink-182
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The artist is: blink-182
+The track name is: What's My Age Again? - Live/1999
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
+
+The artist is: The Playtones
+The track name is: Donna Lee
+The album name is: It’s Alright (Deluxe Version)
+The Spotfiy preview is: https://open.spotify.com/track/1ype5r8PgC4i9tKqDkezM6
+The artist is: Cornelis Vreeswijk
+The track name is: Donna Lee
+The album name is: Cornelis Vreeswijk & Jazz Incorporated (Recorded at Konsertpaleet, Bergen 1979)
+The Spotfiy preview is: https://open.spotify.com/track/4TsxRWYWTo14uwZAvMZvP0
+The artist is: Lee Konitz
+The track name is: Donna Lee
+The album name is: Lee Konitz with Warne Marsh
+The Spotfiy preview is: https://open.spotify.com/track/2N7LJO1uufnSeXIwxooTzg
+The artist is: Jaco Pastorius
+The track name is: Donna Lee
+The album name is: Jaco Pastorius
+The Spotfiy preview is: https://open.spotify.com/track/7CfCkdTNWFQDopWol8SWYQ
+The artist is: Cory Henry
+The track name is: Donna Lee
+The album name is: Gotcha Now Doc
+The Spotfiy preview is: https://open.spotify.com/track/6CYFEVhc3BdAaMcS0G4P68
+
+The artist is: Backstreet Boys
+The track name is: I Want It That Way
+The album name is: The Hits--Chapter One
+The Spotfiy preview is: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+The artist is: Backstreet Boys
+The track name is: I Want It That Way
+The album name is: Millennium
+The Spotfiy preview is: https://open.spotify.com/track/0HcSC0BbA1H5zwGCr9xCON
+The artist is: Jay Smith
+The track name is: I Want It That Way
+The album name is: Jay Smith
+The Spotfiy preview is: https://open.spotify.com/track/0ftdMGkxPD2PRTaQvGmyQO
+The artist is: Backstreet Boys
+The track name is: I Want It That Way
+The album name is: Millennium
+The Spotfiy preview is: https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya
+The artist is: Boyce Avenue
+The track name is: I Want It That Way
+The album name is: New Acoustic Sessions, Vol. 3
+The Spotfiy preview is: https://open.spotify.com/track/4YmJGDRo6oGhObb7MaW5om
+
+The artist is: Backstreet Boys
+The album name is: The Hits--Chapter One
+The track name is: I Want It That Way
+The Spotfiy preview is: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+The track name is: I Want It That Way
+The artist is: Backstreet Boys
+The album name is: Millennium
+The Spotfiy preview is: https://open.spotify.com/track/0HcSC0BbA1H5zwGCr9xCON
+The artist is: Jay Smith
+The track name is: I Want It That Way
+The album name is: Jay Smith
+The Spotfiy preview is: https://open.spotify.com/track/0ftdMGkxPD2PRTaQvGmyQO
+The artist is: Backstreet Boys
+The track name is: I Want It That Way
+The album name is: Millennium
+The Spotfiy preview is: https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya
+The track name is: I Want It That Way
+The album name is: New Acoustic Sessions, Vol. 3
+The artist is: Boyce Avenue
+The Spotfiy preview is: https://open.spotify.com/track/4YmJGDRo6oGhObb7MaW5om
+
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Enema Of The State (Explicit Version)
+The Spotfiy preview is: https://open.spotify.com/track/1hWrl3T1kIH5b9zRHLfCOn
+The artist is: blink-182
+The track name is: What's My Age Again?
+The album name is: Greatest Hits [International Version (Explicit)]
+The Spotfiy preview is: https://open.spotify.com/track/3vAOLnmd5jq4cjyBaK7itC
+The track name is: What's My Age Again? - Live/1999
+The artist is: blink-182
+The album name is: The Mark, Tom And Travis Show (The Enema Strikes Back)
+The Spotfiy preview is: https://open.spotify.com/track/2j1D4hbbjHVoP6JhEroPUI
+The artist is: Our Untold Story
+The track name is: What's My Age Again - Cover
+The album name is: #Tbt - Live & Demos - EP
+The Spotfiy preview is: https://open.spotify.com/track/0gCnsPPUcm8nU0z5UuiXeJ
+The artist is: blink-182
+The track name is: What's My Age Again? - Album Version (Edited)
+The album name is: Teenage dirtbag
+The Spotfiy preview is: https://open.spotify.com/track/5uP263QpVa3Vc5Ev7EWMuI
